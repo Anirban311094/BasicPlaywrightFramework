@@ -14,7 +14,6 @@ public class ModalTest extends BaseTest {
 
     @BeforeMethod
     public void pageSetUp() {
-        // Using our Utility for stable navigation to the slow DemoQA site
         NavigationUtils.navigateWithRetry(page, ConfigReader.getProperty("web_url_demoqa")+"modal-dialogs", 5);
         modalPage = new ModalPage(page, TestListener.getExtentTest());
     }
@@ -36,7 +35,6 @@ public class ModalTest extends BaseTest {
     @Test(description = "Verify that a user can close the Small Modal using the close button")
     public void userCanCloseSmallModal() {
         modalPage.clickOnSmallModal();
-        // Playwright handles wait for visibility automatically during click
         modalPage.closeSmallModal();
         Assert.assertFalse(modalPage.isModalVisible(), "Small modal is still visible after closing");
     }

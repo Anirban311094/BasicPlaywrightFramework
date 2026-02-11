@@ -14,7 +14,6 @@ public class RadioButtonTest extends BaseTest {
 
     @BeforeMethod
     public void pageSetUp() {
-        // Direct navigation to the sub-page for speed and stability
         NavigationUtils.navigateWithRetry(page, "https://demoqa.com/radio-button", 5);
         radioButtonPage = new RadioButtonPage(page, TestListener.getExtentTest());
     }

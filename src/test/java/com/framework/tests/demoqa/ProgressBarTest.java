@@ -24,7 +24,6 @@ public class ProgressBarTest extends BaseTest {
     public void userCanRunProgressBar() {
         progressBarPage.clickOnStartStopButton();
 
-        // Playwright auto-waits up to 30s for this locator to appear
         PlaywrightAssertions.assertThat(progressBarPage.getSuccessProgressBar()).isVisible();
         Assert.assertEquals(progressBarPage.getProgressBar().innerText(), "100%");
     }
@@ -44,7 +43,7 @@ public class ProgressBarTest extends BaseTest {
     public void userCanStopProgressBar() {
         progressBarPage.clickOnStartStopButton();
 
-        page.waitForTimeout(3000); // Wait for 3 seconds of progress
+        page.waitForTimeout(3000);
         progressBarPage.clickOnStartStopButton();
 
         Assert.assertEquals(progressBarPage.getStartStopButtonText(), "Start");
@@ -63,7 +62,6 @@ public class ProgressBarTest extends BaseTest {
 
         progressBarPage.clickOnStartStopButton(); // Resume
 
-        // Wait for completion
         PlaywrightAssertions.assertThat(progressBarPage.getSuccessProgressBar()).isVisible();
         String finalProgress = progressBarPage.getProgressBar().innerText();
 
