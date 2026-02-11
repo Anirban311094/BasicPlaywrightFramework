@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Progress Bar Widget Suite">
+
+    <listeners>
+        <listener class-name="com.framework.listeners.TestListener"/>
+    </listeners>
+
+    <test name="Progress Bar Completion Tests">
+        <classes>
+            <class name="com.framework.tests.demoqa.ProgressBarTest">
+                <methods>
+                    <include name="userCanRunProgressBar"/>
+                    <include name="userCanResetProgressBar"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Progress Bar Interaction Tests">
+        <classes>
+            <class name="com.framework.tests.demoqa.ProgressBarTest">
+                <methods>
+                    <include name="userCanStopProgressBar"/>
+                    <include name="userCanContinueRunningProgressBar"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

@@ -8,7 +8,7 @@
 
     <test name="Login Tests">
         <classes>
-            <class name="com.framework.tests.LoginTest" />
+            <class name="com.framework.tests.swaglabs.LoginTest_SwagLabs" />
         </classes>
     </test>
 </suite>

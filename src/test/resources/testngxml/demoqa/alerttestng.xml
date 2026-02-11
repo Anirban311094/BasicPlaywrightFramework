@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Alerts and Dialogs Suite">
+
+    <listeners>
+        <listener class-name="com.framework.listeners.TestListener"/>
+    </listeners>
+
+    <test name="Standard Alert Tests">
+        <classes>
+            <class name="com.framework.tests.demoqa.AlertTest">
+                <methods>
+                    <include name="userCanOpenAlertWindow"/>
+                    <include name="userCanOpenTimerAlertWindow"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Confirmation Dialog Tests">
+        <classes>
+            <class name="com.framework.tests.demoqa.AlertTest">
+                <methods>
+                    <include name="userCanOpenConfirmWindow"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Prompt Dialog Tests">
+        <classes>
+            <class name="com.framework.tests.demoqa.AlertTest">
+                <methods>
+                    <include name="userCanOpenPromptWindow"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

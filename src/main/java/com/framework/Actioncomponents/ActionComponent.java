@@ -1,4 +1,4 @@
-package com.framework.components;
+package com.framework.Actioncomponents;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.framework.utils.ReportUtils;
@@ -31,6 +31,20 @@ public class ActionComponent {
         log.info("Filling " + description + " with: " + text);
         locator.fill(text);
         ReportUtils.logStepWithScreenshot(page, extentTest, "Filled " + description);
+    }
+
+    /**
+     * Gets text from an element and logs it to the report
+     */
+    public String safeGetText(Locator locator, String description) {
+        try {
+            String text = locator.innerText();
+            ReportUtils.logInfo(extentTest, "Retrieved text from " + description + ": " + text);
+            return text;
+        } catch (Exception e) {
+            log.error("Failed to get text from " + description + " : " + e.getMessage());
+            return "";
+        }
     }
 
     // --- Dropdown Methods ---

@@ -1,15 +1,14 @@
 package com.framework.pages.swaglabs;
-import com.framework.components.ActionComponent;
+import com.framework.Actioncomponents.ActionComponent;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import com.framework.utils.ReportUtils;
 import com.aventstack.extentreports.ExtentTest;
 
-public class ProductsPage {
+public class ProductsPage_SwagLabs {
     private final Page page;
-    private static final Logger log = LogManager.getLogger(LoginPage.class);
+    private static final Logger log = LogManager.getLogger(LoginPage_SwagLabs.class);
     private ActionComponent action;
     private final ExtentTest extentTest;
 
@@ -17,7 +16,7 @@ public class ProductsPage {
     private final Locator allItems;
     private final Locator allItemsPrice;
 
-    public ProductsPage(Page page, ExtentTest extentTest) {
+    public ProductsPage_SwagLabs(Page page, ExtentTest extentTest) {
         this.page = page;
         this.action = new ActionComponent(page, extentTest);
         this.extentTest = extentTest;

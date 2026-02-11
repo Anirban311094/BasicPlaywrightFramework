@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Modal Dialogs Test Suite">
+
+    <listeners>
+        <listener class-name="com.framework.listeners.TestListener"/>
+    </listeners>
+
+    <test name="Small Modal Tests">
+        <classes>
+            <class name="com.framework.tests.demoqa.ModalTest">
+                <methods>
+                    <include name="userCanOpenSmallModal"/>
+                    <include name="userCanCloseSmallModal"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Large Modal Tests">
+        <classes>
+            <class name="com.framework.tests.demoqa.ModalTest">
+                <methods>
+                    <include name="userCanOpenLargeModal"/>
+                    <include name="userCanCloseLargeModal"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

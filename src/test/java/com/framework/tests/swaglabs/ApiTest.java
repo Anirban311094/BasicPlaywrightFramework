@@ -1,4 +1,4 @@
-package com.framework.tests;
+package com.framework.tests.swaglabs;
 
 import com.framework.api.APIClient;
 import com.framework.base.BaseTest;

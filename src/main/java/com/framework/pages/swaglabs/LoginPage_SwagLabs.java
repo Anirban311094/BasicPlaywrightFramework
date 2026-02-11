@@ -1,6 +1,6 @@
 package com.framework.pages.swaglabs;
 
-import com.framework.components.ActionComponent;
+import com.framework.Actioncomponents.ActionComponent;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import org.apache.logging.log4j.LogManager;
@@ -9,9 +9,9 @@ import com.framework.utils.ReportUtils;
 import com.aventstack.extentreports.ExtentTest;
 
 
-public class LoginPage {
+public class LoginPage_SwagLabs {
     private final Page page;
-    private static final Logger log = LogManager.getLogger(LoginPage.class);
+    private static final Logger log = LogManager.getLogger(LoginPage_SwagLabs.class);
     private ActionComponent action;
     private final ExtentTest extentTest;
 
@@ -23,7 +23,7 @@ public class LoginPage {
 
 
     // 2. Constructor: Receives the 'page' object from the test
-    public LoginPage(Page page, ExtentTest extentTest) {
+    public LoginPage_SwagLabs(Page page, ExtentTest extentTest) {
         this.page = page;
         this.action = new ActionComponent(page, extentTest);
         this.extentTest = extentTest;
