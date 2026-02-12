@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Account Management Regression Suite" parallel="none">
+    <listeners>
+        <listener class-name="com.framework.listeners.TestListener"/>
+    </listeners>
+
+    <test name="User Registration Validation">
+        <classes>
+            <class name="com.framework.tests.demoqa.bookstore.AccountManagementTest">
+                <methods>
+                    <include name="userCannotRegisterWhenRecaptchaIsNotVerified"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Login Functionality">
+        <classes>
+            <class name="com.framework.tests.demoqa.bookstore.AccountManagementTest">
+                <methods>
+                    <include name="userCanLoginWithValidCredentials"/>
+                    <include name="userCanLogOut"/>
+                    <include name="userCannotLogInWithInvalidUsername"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Session and Deletion">
+        <classes>
+            <class name="com.framework.tests.demoqa.bookstore.AccountManagementTest">
+                <methods>
+                    <include name="userCanLoginWithValidCredentials"/>
+                    <include name="userCanDeleteAccount"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
