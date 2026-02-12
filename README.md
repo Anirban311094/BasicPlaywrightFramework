@@ -1,5 +1,5 @@
 # BasicPlaywrightFramework
-BasicPlaywrightFramework
+Basic Playwright Framework with Java
 
 ## 👨‍💻 Author
 
