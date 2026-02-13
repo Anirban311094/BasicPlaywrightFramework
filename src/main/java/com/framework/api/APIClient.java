@@ -67,4 +67,28 @@ public class APIClient {
             return null;
         }
     }
+
+    /**
+     * Executes a GET request and logs details.
+     * Matches the 'accept: application/json' header in your curl command.
+     */
+    public APIResponse get(String endpoint) {
+        APIResponse response = request.get(endpoint, RequestOptions.create()
+                .setHeader("accept", "application/json"));
+
+        logResponseDetails(response);
+        return response;
+    }
+
+    /**
+     * Executes an authenticated GET request using a Bearer Token.
+     */
+    public APIResponse getWithAuth(String endpoint, String token) {
+        APIResponse response = request.get(endpoint, RequestOptions.create()
+                .setHeader("accept", "application/json")
+                .setHeader("Authorization", "Bearer " + token));
+
+        logResponseDetails(response);
+        return response;
+    }
 }

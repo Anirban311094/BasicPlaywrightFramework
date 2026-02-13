@@ -23,4 +23,9 @@ public class DemoQAAPI {
         body.put("password", password); //
         return apiClient.post(ConfigReader.getProperty("api_url_demoqa")+"/Account/v1/GenerateToken", body);
     }
+
+    public APIResponse getBookByISBN(String isbn) {
+        // Constructing the URL with the query parameter as seen in your curl command
+        return apiClient.get(ConfigReader.getProperty("api_url_demoqa")+"/BookStore/v1/Book?ISBN=" + isbn);
+    }
 }
